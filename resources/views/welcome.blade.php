@@ -14,11 +14,13 @@
 
 <body>
 <main class="container">
-
-    <div class="starter-template  py-5 px-3">
-        @yield('content')
+    <div class="row">
+        <div class="col-md-12">
+            <div class="d-flex align-items-center justify-content-center flex-column bg-white p-5 m-5" style="height: 90vh">
+                @yield('content')
+            </div>
+        </div>
     </div>
-
 </main><!-- /.container -->
 
 </body>

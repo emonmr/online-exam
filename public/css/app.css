@@ -10004,3 +10004,8 @@ h3 {
     border-color: #dee2e6;
   }
 }
+body {
+  margin: 0;
+  padding: 0;
+  background: #e2e3e5;
+}
