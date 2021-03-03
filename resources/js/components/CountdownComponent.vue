@@ -1,5 +1,5 @@
 <template>
-    <div v-if="examEndTime">
+    <div v-if="until">
         <div v-if="finished" v-text="expiredText"></div>
         <div v-else>Remaining Time : {{ remaining.hours }} Hour(s) {{ remaining.minutes }} Minute(s) and
             {{ remaining.seconds }} Seconds
@@ -21,9 +21,6 @@ export default {
         this.refreshEverySecond();
     },
     computed: {
-        examEndTime() {
-            return window.localStorage.getItem('exam_end_time');
-        },
 
         finished() {
             return this.remaining.total <= 0;
