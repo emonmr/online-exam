@@ -16,7 +16,7 @@ class ExamsTableSeeder extends Seeder
     {
         DB::table('exams')->insert([
             'title' => 'Examination 1',
-            'exam_time' => 30,
+            'exam_time' => 1,
             'is_time_extended' => false,
             'is_negative_marking' => false,
             'is_all_question_same_marks' => true,
