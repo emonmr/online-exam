@@ -1872,9 +1872,6 @@ __webpack_require__.r(__webpack_exports__);
     this.refreshEverySecond();
   },
   computed: {
-    examEndTime: function examEndTime() {
-      return window.localStorage.getItem('exam_end_time');
-    },
     finished: function finished() {
       return this.remaining.total <= 0;
     },
@@ -59286,7 +59283,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm.examEndTime
+  return _vm.until
     ? _c("div", [
         _vm.finished
           ? _c("div", { domProps: { textContent: _vm._s(_vm.expiredText) } })

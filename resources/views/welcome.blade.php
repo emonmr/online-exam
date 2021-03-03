@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>{{ config('app.name', 'Online Test') }}</title>
+    <title> Online Test </title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
