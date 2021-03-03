@@ -10,11 +10,11 @@ class Exam extends Model
     use HasFactory;
     public function questions()
     {
-        return $this->hasMany(Question::class);
+        return $this->belongsToMany(Question::class);
     }
     public function firstQuestion()
     {
-        return $this->hasOne(Question::class)->orderBy('id');
+        return $this->belongsToMany(Question::class)->orderBy('id' , 'asc')->take(1);
     }
 
 }

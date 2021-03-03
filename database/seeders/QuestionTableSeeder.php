@@ -19,14 +19,16 @@ class QuestionTableSeeder extends Seeder
     {
         $faker = \Faker\Factory::create();
 
-        for($i= 0; $i < 10; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             $question = new Question();
-            $question->title = $faker->sentence(6, 2).'?';
+            $question->title = $faker->sentence(6, 2) . '?';
             $question->marks = 10;
-            $question->question_type_id  = $faker->randomElement([1,2]);
-            $question->exam_id = 1;
+            $question->question_type_id = $faker->randomElement([1, 2]);
             $question->save();
-            if($question->question_type_id == 1) {
+            // exam is now static
+            $question->exams()->attach(1);
+
+            if ($question->question_type_id == 1) {
                 $optionHeader = OptionHeader::all();
 
                 foreach ($optionHeader as $header) {

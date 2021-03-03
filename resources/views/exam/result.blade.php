@@ -9,7 +9,12 @@
             <p><b>Total MCQ Correct Answer </b>: {{$totalCorrectAnswer}}</p>
         </div>
         <p class="lead">
-            <a class="btn btn-primary btn-lg" href="/exam" role="button">Back to exam homepage</a>
+            <a class="btn btn-primary btn-lg" href="/" role="button">Back to exam homepage</a>
         </p>
     </div>
+@stop
+@section('javascript')
+    <script type="text/javascript">
+        window.localStorage.removeItem('exam_end_time')
+    </script>
 @stop

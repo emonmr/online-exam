@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Online Test') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -16,12 +16,17 @@
 <main class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="d-flex align-items-center justify-content-center flex-column bg-white p-5 m-5" style="height: 90vh">
-                @yield('content')
+            <div id="app">
+                <div class="d-flex align-items-center justify-content-center flex-column bg-white p-5 m-5"
+                     style="height: 90vh">
+                    @yield('content')
+                </div>
             </div>
         </div>
     </div>
 </main><!-- /.container -->
 
 </body>
+@yield('javascript')
+
 </html>

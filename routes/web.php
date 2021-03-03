@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::group(['prefix' => 'exam'], function () {
+Route::group(['prefix' => ''], function () {
     Route::get('', [\App\Http\Controllers\ExamController::class, 'index']);
-    Route::get('result/{examId}/{userId}', [\App\Http\Controllers\ExamController::class, 'result']);
-    Route::post('store/{id}', [\App\Http\Controllers\ExamController::class, 'store']);
-    Route::get('/{id}', [\App\Http\Controllers\ExamController::class, 'detail']);
-
+    Route::get('exam/result/{examId}/{userId}', [\App\Http\Controllers\ExamController::class, 'result']);
+    Route::post('exam/store/{id}', [\App\Http\Controllers\ExamController::class, 'store']);
+    Route::get('exam/{session}/{examId}/{questionId}/{userId}', [\App\Http\Controllers\ExamController::class, 'detail']);
+    Route::post('create-session', [\App\Http\Controllers\ExamController::class, 'createSession']);
 });
 
